@@ -162,7 +162,7 @@ section.wallpapers {
 
 footer {
     width: 100%;
-    height: 100px;
+    height: 100%;
     background-color: rgb(25, 14, 54);
     display: flex;
     justify-content: flex-start;
