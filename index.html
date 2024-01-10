@@ -18,18 +18,45 @@
     <title>CoffeeVibes</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header>
       <img class="logo" src="./img/logo.png" alt="logo" />
 
       <nav>
-        <a class="menu" href="#">Inicio</a>
+        <a class="menu" href="index.html">Inicio</a>
         <a class="menu" href="#">Biblioteca</a>
-        <a class="menu" href="#">Sobre</a>
+        <a class="menu" href="sobre.html">Sobre</a>
       </nav>
 
-      <section class="pesquisar">
-        <input type="text" placeholder="Search . . ." />
+      <section>
+        <form class="search">
+          <input type="text" placeholder="Search . . ." />
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="47"
+              height="46"
+              viewBox="0 0 47 46"
+              fill="none"
+            >
+              <path
+                d="M18.6741 34.0742C27.3306 34.0742 34.3481 27.0567 34.3481 18.4001C34.3481 9.7436 27.3306 2.72607 18.6741 2.72607C10.0175 2.72607 3 9.7436 3 18.4001C3 27.0567 10.0175 34.0742 18.6741 34.0742Z"
+                stroke="#f1f149"
+                stroke-width="4.11442"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M43.8892 43.6149L30.2596 29.9852"
+                stroke="#f1f149"
+                stroke-width="4.77037"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </form>
       </section>
     </header>
 
@@ -99,18 +126,41 @@
     </main>
 
     <footer>
-      <p>Desenvolvido por: Pedro Henrique Souza Candido</p>
+      <section class="img-form">
+        <img src="./img/img-form-2.png" alt="imagem-formulario" />
+      </section>
 
-      <a
-        href="https://instagram.com/pedro_henrique3203?igshid=MzRlODBiNWFlZA=="
-        target="_blank"
-      >
-        <img
-          class="img-contato"
-          src="./img/icon-instagram.png"
-          alt="instagram"
-        />
-      </a>
+      <section class="form-avaliacao">
+        <h3>Sugestões</h3>
+        <form>
+          <label for="Username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Seu nome!"
+          />
+        </form>
+        <form>
+          <label for="email">email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Digite seu melhor email!"
+          />
+        </form>
+        <form>
+          <label for="sugestao">Sugestão:</label>
+          <textarea
+            id="sugestao"
+            name="sugestao"
+            placeholder="Digite sua sugestão aqui..."
+            required
+          ></textarea>
+          <button>Enviar</button>
+        </form>
+      </section>
     </footer>
   </body>
 </html>

@@ -41,32 +41,47 @@ header {
 
 a.menu {
   text-decoration: none;
-  font-size: 30px;
+  font-size: 25px;
   color: rgb(241, 241, 73);
   margin: 20px;
-  transition: 0.1s ease-in-out;
 }
 
-a.menu:hover {
-  border: 2px solid rgb(241, 241, 73);
-  border-radius: 10px;
+form.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
 }
 
-input {
+.search button {
+  background: rgb(25, 14, 54);
+  width: 45px;
+  height: 45px;
+  border: 3px solid rgb(66, 37, 138);
+  border-left: none;
+  border-radius: 0px 35px 35px 0px;
+}
+
+.search button svg {
+  height: 25px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.search input {
   color: rgb(241, 241, 73);
   font-size: 16px;
   background: transparent;
-  width: 305px;
+  width: 100%;
   height: 45px;
-  margin-right: 10px;
   padding: 10px;
   border: 3px solid rgb(66, 37, 138);
+  border-right: none;
   outline: none;
-  border-radius: 35px;
+  border-radius: 35px 0px 0px 35px;
   transition: all 0.5s;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #9a86fd;
 }
-
+/*-----------------FIm da header----------------*/
 main {
   display: flex;
   justify-content: space-evenly;
@@ -171,7 +186,7 @@ section.wallpapers {
 
 .wallpapers button:hover {
   background-color: #ffffff41;
-  border: rgb(241, 241, 73) 2px solid;
+  border: #08fd0c83 2px solid;
 }
 
 /*---------------Footer---------------*/
@@ -181,25 +196,81 @@ footer {
   height: 100%;
   background-color: rgb(25, 14, 54);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  box-shadow: #9a86fd63 0px 5px 15px;
 }
 
-img.img-contato {
-  width: 40px;
-  height: 40px;
-  margin-left: 15px;
-}
-img.img-contato:hover {
-  transform: scale(110%);
+.img-form img {
+  width: 400px;
+  height: 1000px;
 }
 
-footer p {
-  margin-left: 10px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 400;
+.form-avaliacao {
+  width: 30%;
+  height: 100%;
+  border: 2px solid rgb(86, 32, 221);
+  background-color: rgb(40, 23, 85);
+  box-shadow: #9a86fd63 0px 5px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-avaliacao h3,
+label {
+  color: rgb(241, 241, 73);
+}
+
+.form-avaliacao form {
+  width: 90%;
+  display: flex;
+  margin: 15px 0px 15px 0px;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.form-avaliacao input {
+  background-color: transparent;
+  border: 2px solid #08fd0c83;
+  box-shadow: #08fd0c70 0px 5px 10px;
+  border-radius: 10px;
+  height: 50px;
+  color: rgb(241, 241, 73);
+}
+
+.form-avaliacao textarea {
+  width: 100%;
+  height: 100px;
+  max-width: 100%;
+  max-height: 100px;
+  min-width: 100%;
+  min-height: 100px;
+  background-color: transparent;
+  border: 2px solid #08fd0c83;
+  box-shadow: #08fd0c70 0px 5px 10px;
+  color: rgb(241, 241, 73);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.form-avaliacao button {
+  background-color: rgb(241, 241, 73);
+  border: 2px solid rgb(236, 236, 35);
+  box-shadow: rgba(241, 241, 73, 0.548) 0px 5px 10px;
+  border-radius: 10px;
+  height: 50px;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transforme 0.2s ease-in-out;
+}
+
+.form-avaliacao button:active {
+  transform: scale(0.95);
 }
 
 /*---------------Responsividade---------------*/
@@ -242,19 +313,22 @@ footer p {
 }
 
 @media (max-width: 450px) {
+  /*header*/
   header nav {
     display: none;
   }
 
-  input {
-    width: 205px;
+  a.menu {
+    font-size: 15px;
   }
 
   .logo {
     width: 100px;
     height: 100px;
   }
+  /*fim da header*/
 
+  /*main*/
   main {
     flex-direction: column;
   }
@@ -278,5 +352,20 @@ footer p {
 
   .wallpapers div {
     width: 100%;
+  }
+  /*Fim da main*/
+
+  /*footer*/
+  footer {
+    flex-direction: column-reverse;
+  }
+
+  .img-form img {
+    width: 300px;
+    height: 750px;
+  }
+  .form-avaliacao {
+    width: 90%;
+    margin: 10px 0px 15px 0px;
   }
 }
